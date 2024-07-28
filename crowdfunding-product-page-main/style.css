@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+body {
+  background: #f7f7f7;
+}
+/* type */
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 33px ;
+}
+h3 {
+  font-size: 28px ;
+}
+p {
+  font-size: 20px;
+  padding: 32px 0;
+  line-height: 1.4;
+  color: hsl(0, 0%, 48%);
+}
+@media (max-width: 950px) {
+  h1 {
+    font-size: 28px ;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+/* header */
+header {
+  height: 405px;
+  background: url('images/image-hero-desktop.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+header nav {
+  height: 100px;
+  width: 80%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+header nav a {
+  color: #fff;
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+header nav a:hover {
+  opacity: 0.8;
+}
+header nav #menuBtn {
+  background: rgba(0, 0, 0, 0);
+  font-size: 0;
+  display: none;
+}
+@media (max-width: 950px) {
+  header {
+    background-image: url('images/image-hero-mobile.jpg');
+  }
+  header nav {
+    z-index: 900;
+    position: fixed;
+    left: 10%;
+    top: 0;
+  }
+  header nav #menuBtn {
+    display: block;
+  }
+  header nav .nav-links {
+    background: #fff;
+    position: fixed;
+    width: 70%;
+    max-width: 300px;
+    top: 100px;
+    overflow: hidden;
+    border-radius: 8px;
+    display: none;
+  }
+  header nav .nav-links a {
+    display: block;
+    color: hsl(0, 0%, 0%);
+    border-bottom: 1px solid hsl(0, 0%, 48%);
+  }
+}
+/* first card */
+/* buttons */
+.cta-btn {
+  height: 56px;
+  width: 150px;
+  padding: 12px 24px;
+  font-weight: 500;
+  background: hsl(176, 50%, 47%);
+  color: #fff;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+.cta-btn:hover {
+  background: hsl(176, 72%, 28%);
+}
+.bookmark-btn {
+  height: 56px;
+  width: 150px;
+  padding: 12px 24px;
+  font-weight: 500;
+  background: hsl(0, 0%, 48%);
+  color: #fff;
+  border-radius: 50px;
+  text-align: right;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.bookmark-btn img {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  transform: translateY(-50%);
+  display: block;
+}
+@media (max-width: 400px) {
+  .bookmark-btn {
+    width: auto;
+    font-size: 0;
+    background: none;
+  }
+}
+.bookmark-btn:hover {
+  background: #acacac;
+}
+main {
+  transform: translateY(-8%);
+  width: 70%;
+  max-width: 705px;
+  margin: 0 auto;
+}
+main section {
+  border-radius: 8px;
+}
+main .heading {
+  padding: 32px;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+}
+main .heading img {
+  transform: translateY(-100%);
+}
+main .heading .btn-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+}
+@media (max-width: 950px) {
+  main {
+    width: 90%;
+  }
+}
+main .card-2 {
+  background: #fff;
+  padding: 28px;
+  margin-top: 24px;
+}
+main .card-2 .numbers-cards-container {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  padding: 10px 0;
+}
+main .card-2 .numbers-cards-container .num-card {
+  width: 30%;
+  padding: 10px 0;
+}
+main .card-2 .numbers-cards-container .num-card p {
+  font-size: 14px;
+  padding: 5px 0;
+}
+main .card-2 .numbers-cards-container .num-card h2 {
+  font-size: 28px;
+  color: hsl(0, 0%, 0%);
+}
+main .card-2 .numbers-cards-container div:nth-child(2) {
+  border-right: 1px solid #dedede;
+  border-left: 1px solid #dedede;
+}
+@media (max-width: 950px) {
+  main .card-2 .numbers-cards-container {
+    flex-direction: column;
+  }
+  main .card-2 .numbers-cards-container .num-card {
+    width: 90%;
+  }
+}
+main .card-2 .prog {
+  width: 90%;
+  overflow: hidden;
+  background: #dedede;
+  height: 10px;
+  border-radius: 50px;
+  margin: 10px auto;
+}
+main .card-2 .prog div {
+  height: 100%;
+  width: 80%;
+  background: hsl(176, 50%, 47%);
+  border-radius: 10px;
+}
+.about {
+  padding: 28px;
+  margin: 24px 0;
+  background: #fff;
+}
+.about p {
+  padding: 12px 0;
+}
+.about .card {
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 0;
+}
+.about .card .card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+}
+.about .card .card-head p {
+  color: hsl(176, 50%, 47%);
+}
+.about .card .card-foot {
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+.about .card .card-foot div {
+  display: flex;
+  align-items: center;
+  min-height: 20px;
+}
+.about .card .card-foot div span {
+  font-weight: 700;
+  font-size: 33px;
+}
+@media (max-width: 950px) {
+  .about .card .card-head,
+  .about .card .card-foot {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .about .card .card-head div,
+  .about .card .card-foot div {
+    padding: 10px 0;
+  }
+}
+.dark-suc-bg {
+  overflow: scroll;
+  position: fixed;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+}
+.dark-suc-bg .container {
+  width: 80%;
+  max-width: 700px;
+  height: 100vh;
+  background: pink;
+  overflow: scroll;
+}
+.dark-suc-bg .container .Success {
+  display: none;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+  min-height: 300px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+}
+.dark-suc-bg .container .Success img {
+  margin: 12px;
+}
+.dark-suc-bg .container .Success button {
+  padding: 12px 16px;
+  background: hsl(176, 50%, 47%);
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  border-radius: 40px;
+  color: #fff;
+}
+.dark-suc-bg .container .Success button:hover {
+  background: hsl(176, 72%, 28%);
+}
+.dark-suc-bg .container .selection-modal {
+  width: 90%;
+  max-width: 700px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+}
+.dark-suc-bg .container .selection-modal h3 {
+  font-size: 18px;
+}
+.dark-suc-bg .container .selection-modal p {
+  padding: 12px 0;
+}
+.dark-suc-bg .container .selection-modal .selection-card {
+  border: 1px solid #dedede;
+  border-radius: 8px;
+  position: relative;
+  margin: 24px 0;
+}
+.dark-suc-bg .container .selection-modal .selection-card .dot {
+  top: 23px;
+  left: 12px;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 1px solid #dedede;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dark-suc-bg .container .selection-modal .selection-card .dot div {
+  width: 70%;
+  height: 70%;
+  background: hsl(176, 50%, 47%);
+  border-radius: 100%;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-body {
+  padding: 24px;
+  padding-left: 45px;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-body .card-body-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-body .card-body-head div:nth-child(1) {
+  display: flex;
+  height: 4px;
+  align-items: center;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-body .card-body-head div:nth-child(1) p {
+  color: hsl(176, 50%, 47%);
+  padding: 0 8px;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-body .card-body-head p:nth-child(2) span {
+  color: hsl(0, 0%, 0%);
+  font-size: 33px;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-foot {
+  padding: 12px;
+  border-top: 1px solid #dedede;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-foot form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-foot form #email {
+  width: 40%;
+  padding: 5px;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-foot form .price {
+  padding: 12px 16px;
+  width: 25%;
+  border: 1px solid #dedede;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-foot form button {
+  padding: 12px 16px;
+  width: 25%;
+  border: 1px solid #dedede;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  font-weight: 600;
+  background: hsl(176, 50%, 47%);
+  width: auto;
+  border: none;
+  color: #fff;
+}
+.dark-suc-bg .container .selection-modal .selection-card .card-foot form button:hover {
+  background: hsl(176, 72%, 28%);
+}
+@media (max-width: 950px) {
+  .dark-suc-bg .container .card-foot form {
+    flex-direction: column;
+  }
+  .dark-suc-bg .container .card-foot form #email {
+    width: 80%;
+  }
+  .dark-suc-bg .container .card-body-head {
+    text-align: left;
+    align-items: start;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .dark-suc-bg .container .card-body-head div {
+    margin: 24px 0;
+    height: 200px;
+    flex-direction: column;
+    align-items: start;
+  }
+  .dark-suc-bg .container .card-body-head div p {
+    align-items: start;
+  }
+}
+.mute {
+  background: #acacac;
+}

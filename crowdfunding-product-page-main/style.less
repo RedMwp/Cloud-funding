@@ -1,0 +1,469 @@
+@Moderatecyan: hsl(176, 50%, 47%);
+@Darkcyan: hsl(176, 72%, 28%);
+@Black: hsl(0, 0%, 0%);
+@Darkgray: hsl(0, 0%, 48%);
+@transit:all .3s ease-in-out;
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  border:none;
+  box-sizing: border-box;
+}
+
+@mobile:950px;
+.res(@size;@rules){
+  @media (max-width: @size){
+    @rules();
+  }
+}
+body{
+  background: @Darkgray+125%;
+}
+/* type */
+h1{
+  font-size:40px;
+}
+h2{
+  font-size:33px ;
+}
+h3{
+  font-size:28px ;
+}
+p{
+  font-size:20px;
+  padding: 32px 0;
+  line-height: 1.4;
+  color: @Darkgray;
+}
+.res(@mobile;{
+    h1{
+      font-size:28px ;
+    }
+    h2{
+      font-size: 22px;
+    }
+    h3{
+      font-size:20px
+    }
+    p{
+      font-size: 16px;
+    }
+  });
+  
+  
+/* header */
+header{
+  height: 405px;
+  background: url('images/image-hero-desktop.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  nav{
+    height: 100px;
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    a{
+      color:#fff;
+      padding: 12px 24px;
+      font-weight: 500;
+      transition:@transit;
+    }
+    a:hover{
+      opacity: .8;
+    }
+    #menuBtn{
+      background: rgba(0,0,0,0);
+      font-size: 0;
+      display: none;
+    }
+  }
+  .res(@mobile;{
+    background-image: url('images/image-hero-mobile.jpg');
+    nav{
+      z-index: 900;
+    position: fixed;
+    left: 10%;
+    top:0;
+    #menuBtn{
+        display: block;
+      }
+    .nav-links{
+      background: #fff;
+      position: fixed;
+      width: 70%;
+      max-width: 300px;
+      top: 100px;
+      overflow: hidden;
+      border-radius: 8px;
+      display: none;
+      a{
+        display: block;
+        color: @Black;
+        border-bottom: 1px solid @Darkgray;
+        
+      }
+      
+    }
+  }
+  })
+}
+
+/* first card */
+/* buttons */
+  .cta-btn{
+    height: 56px;
+    width: 150px;
+    padding: 12px 24px;
+    font-weight: 500;
+    background: @Moderatecyan;
+    color: #fff;
+    border-radius: 50px;
+    transition:@transit;
+  }
+  .cta-btn:hover{
+    background: @Darkcyan;
+  }
+  .bookmark-btn{
+    height: 56px;
+    width: 150px;
+    padding: 12px 24px;
+    font-weight: 500;
+    background: @Darkgray;
+    color: #fff;
+    border-radius: 50px;
+    text-align: right;
+    position: relative;
+    img{
+      position: absolute;
+      left: 0;
+      top:100%;
+      transform: translateY(-50%);
+      display: block;
+      
+    }
+    transition: @transit;
+    .res(400px;{
+      width: auto;
+      font-size:0;
+      background: none;
+    })
+  }
+  .bookmark-btn:hover{
+    background: @Darkgray+50%;
+  }
+
+
+
+
+main{
+  section{
+    border-radius: 8px;
+  }
+transform: translateY(-8%);
+width: 70%;
+max-width: 705px;
+margin: 0 auto;
+
+  .heading{
+    padding: 32px;
+    text-align: center;
+    background: #fff;
+    border-radius: 5px;
+    img{
+      transform: translateY(-100%);
+    }
+    .btn-group{
+      display: flex;
+      justify-content: space-between;
+      padding: 12px;
+    }
+  }
+  .res(@mobile;{
+    width: 90%;
+  });
+  
+  .card-2{
+    background: #fff;
+    padding: 28px;
+    margin-top: 24px;
+    .numbers-cards-container{
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 100px;
+      padding: 10px 0;
+      
+      .num-card{
+        width: 30%;
+        padding: 10px 0;
+        p{
+          font-size:14px;
+          padding: 5px 0;
+        }
+        h2{
+          font-size: 28px;
+          color: @Black;
+        }
+      };
+      div:nth-child(2){
+        border-right: 1px solid @Darkgray+100%;
+          border-left: 1px solid @Darkgray+100%;
+      }
+      .res(@mobile;{
+        flex-direction: column;
+        .num-card{
+          width: 90%;
+        }
+      });
+    }
+    
+      .prog{
+    width: 90%;
+    overflow: hidden;
+    background: @Darkgray+100%;
+    height: 10px;
+    border-radius: 50px;
+    margin: 10px auto;
+    div{
+      height: 100%;
+      width: 80%;
+      background: @Moderatecyan;
+      border-radius: 10px;
+    }
+  }
+}
+  }
+.about{
+  padding: 28px;
+  margin: 24px 0;
+  background: #fff;
+  p{
+    padding: 12px 0;
+  }
+  .card{
+    border:1px solid @Darkgray+100%;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+    .card-head{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 50px;
+      p{
+        color: @Moderatecyan;
+      }
+    }
+    .card-foot{
+      min-height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      div{
+        display: flex;
+        align-items: center;
+        min-height: 20px;
+        span{
+          font-weight: 700;
+          font-size:33px
+        }
+      }
+    }
+    .res(@mobile;{
+      .card-head,.card-foot{
+        flex-direction: column;
+        align-items: flex-start;
+        div{
+          padding: 10px 0;
+        }
+      }
+    })
+  };
+  .card:nth-child(3){
+    .cta-btn{
+  }
+}
+
+}
+.dark-suc-bg{
+  
+  overflow: scroll;
+  position:fixed;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgba(0,0,0,.4);
+  top:0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  .container{
+    width: 80%;
+    max-width: 700px;
+    height: 100vh;
+    background: pink;
+    overflow: scroll;
+  .Success{
+    display: none;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    min-height: 300px;
+    background: #fff;
+    padding: 24px;
+    border-radius: 8px;
+    img{
+      margin: 12px;
+    }
+    button{
+      padding: 12px 16px;
+      background: @Moderatecyan;
+      font-weight: 500;
+      transition: @transit;
+      border-radius: 40px;
+      color: #fff;
+    }
+    button:hover{
+      background: @Darkcyan;
+    }
+  }
+  .selection-modal{
+    width: 90%;
+    max-width: 700px;
+    background: #fff;
+    padding: 24px;
+    border-radius:8px;
+    h3{
+      font-size:18px;
+    }
+    p{
+      padding: 12px 0;
+    }
+  .selection-card{
+    border: 1px solid @Darkgray+100%;
+    border-radius: 8px;
+    position: relative;
+    margin: 24px 0;
+    .dot{
+      top:23px;
+      left: 12px;
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      border: 1px solid @Darkgray+100%;
+      border-radius:50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      div{
+        width: 70%;
+        height: 70%;
+        background: @Moderatecyan;
+        border-radius:100%;
+      }
+    }
+    .card-body{
+      .card-body-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height:50px;
+        div:nth-child(1){
+          display: flex;
+          height: 4px;
+          align-items: center;
+          p{
+          color: @Moderatecyan;
+          padding: 0 8px;
+        }
+        }
+        
+          p:nth-child(2){
+            
+            span{
+              color: @Black;
+              font-size:33px;
+            }
+          }
+        
+        
+      }
+    padding: 24px;
+    padding-left: 45px;
+    }
+    .card-foot{
+      padding: 12px;
+      border-top: 1px solid @Darkgray+100%;
+      form{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        #email{
+          width: 40%;
+          padding: 5px;
+        }
+        .price{
+          padding: 12px 16px;
+          width: 25%;
+          border:1px solid @Darkgray+100%;
+          border-radius: 50px;
+          transition: @transit;
+          font-weight: 600;
+        }
+        button{
+          .price;
+          background: @Moderatecyan;
+          width: auto;
+          border: none;
+          color:#fff
+        }
+        button:hover{
+          background: @Darkcyan;
+          
+        }
+        
+      }
+    }
+  }
+  }
+  .res(@mobile;{
+  
+    .card-foot{
+    form{
+      flex-direction: column;
+      #email{
+        width: 80%;
+      }
+    }
+    }
+    .card-body-head{
+    text-align: left;
+    align-items: start;
+      flex-direction: column;
+      justify-content: start;
+      div{
+        margin:  24px 0;
+        height: 200px;
+flex-direction: column;
+align-items: start;
+p{
+  align-items: start;
+}
+      }
+    }
+  })
+}
+}
+.mute{
+  
+      background: @Darkgray+50%;
+}
